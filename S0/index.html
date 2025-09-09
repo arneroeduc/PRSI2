@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía del Profesor: El Legado del Desarrollador</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-[#2C3E50] leading-tight">Guía del Profesor<br><span class="text-[#3498DB]">El Legado del Desarrollador</span></h1>
+            <p class="mt-4 text-lg text-gray-600">Recurso completo para la sesión de introducción de Programación, Redes y Sistemas Informáticos (2º Bachillerato)</p>
+        </header>
+
+        <main>
+            <section id="mission-briefing" class="mb-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <p class="text-5xl mb-2">🎯</p>
+                        <h3 class="text-xl font-bold text-[#2C3E50]">Objetivo Principal</h3>
+                        <p class="text-gray-600 mt-2">Enfocar el curso en la aplicación avanzada de conocimientos y la creación de proyectos complejos de cara a su futuro académico.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <p class="text-5xl mb-2">⏱️</p>
+                        <h3 class="text-xl font-bold text-[#2C3E50]">Duración Total</h3>
+                        <p class="text-gray-600 mt-2 text-2xl font-bold">45-50 <span class="text-base font-normal">minutos</span></p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <p class="text-5xl mb-2">👨‍🎓</p>
+                        <h3 class="text-xl font-bold text-[#2C3E50]">Nivel</h3>
+                        <p class="text-gray-600 mt-2 text-2xl font-bold">2º <span class="text-base font-normal">de Bachillerato</span></p>
+                    </div>
+                     <div class="bg-white p-6 rounded-lg shadow-md">
+                        <p class="text-5xl mb-2">🔑</p>
+                        <h3 class="text-xl font-bold text-[#2C3E50]">Competencias Clave</h3>
+                        <p class="text-gray-600 mt-2">STEM, Digital, Aprender a aprender, Sentido de la iniciativa y espíritu emprendedor.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="detailed-timeline" class="bg-white p-6 md:p-8 rounded-lg shadow-lg mb-12">
+                <h2 class="text-3xl font-bold text-center text-[#2C3E50] mb-8">Guion Detallado de la Sesión</h2>
+                <div class="space-y-8">
+                    <!-- Fase 1 -->
+                    <div class="flex flex-col md:flex-row items-start gap-6 p-4 border-l-4 border-[#3498DB]">
+                        <div class="flex-shrink-0 text-center md:text-left">
+                            <div class="bg-[#3498DB] text-white rounded-full w-20 h-20 flex flex-col items-center justify-center">
+                                <span class="text-2xl font-bold">Fase 1</span>
+                                <span class="text-xs">15-20 min</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-[#3498DB]">El Legado: Presentación del Curso</h3>
+                            <p class="text-gray-600 mb-4">Objetivo: Consolidar la visión de la asignatura como la etapa final de preparación, enfocada en la aplicación y especialización.</p>
+                            <ul class="list-disc list-inside space-y-4">
+                                <li><strong>(0-5 min) Presentación de Enfoque:</strong>
+                                    <p class="text-gray-700 mt-1 pl-4 border-l-2 border-gray-200">"Buenos días a todos y bienvenidos a vuestro último año de Bachillerato. Soy [Tu Nombre]. Este curso, en Programación, Redes y Sistemas Informáticos, damos un salto cualitativo. Ya no se trata solo de aprender los fundamentos que vimos el año pasado; se trata de aplicarlos para convertiros en especialistas. El objetivo es que cada uno de vosotros construya un 'legado': una serie de proyectos complejos y funcionales que demuestren vuestra maestría en diferentes áreas. Estos proyectos serán vuestra mejor carta de presentación para la universidad o los ciclos formativos. Pasamos de 'aprender sobre' a 'saber hacer' a un nivel superior."</p>
+                                </li>
+                                <li><strong>(5-8 min) Bienvenida y Conexión Profesional:</strong>
+                                    <p class="text-gray-700 mt-1">"El año pasado sentamos las bases. Este año vamos a construir sobre ellas. Levantad la mano, ¿quién recuerda algún proyecto del año pasado del que se sienta especialmente orgulloso? (Deja que compartan 1 o 2 ejemplos). Perfecto, pues esa sensación de crear algo que funciona es lo que vamos a multiplicar. Este curso es vuestra oportunidad para profundizar en el área que más os interese y salir de aquí con proyectos que os definan como desarrolladores."</p>
+                                </li>
+                                <li><strong>(8-18 min) Módulos de Especialización:</strong>
+                                    <p class="text-gray-700 mt-1">"Vuestro legado se construirá a través de varios módulos de especialización, que se corresponden con las Situaciones de Aprendizaje de este curso."</p>
+                                    
+                                    <div class="mt-4 pl-4 border-l-2 border-gray-200 space-y-6">
+                                        <div>
+                                            <h4 class="font-bold text-lg text-gray-800">Módulo 1: Desarrollo Avanzado con Orientación a Objetos (SA1-SA5)</h4>
+                                            <p>"Profundizaremos en la Programación Orientada a Objetos, un paradigma que usan los profesionales. Trabajaremos con entornos como Greenfoot y BlueJ para crear escenarios interactivos y juegos como 'El Ahorcado'. Aquí demostraréis que sabéis **diseñar y programar software estructurado y complejo**."</p>
+                                        </div>
+                                         <div>
+                                            <h4 class="font-bold text-lg text-gray-800">Módulo 2: Sistemas Embebidos y IoT (SA6-SA7)</h4>
+                                            <p>"Daremos un paso más allá del PC tradicional. Vamos a crear un entorno de trabajo completo con una Raspberry Pi. Aprenderéis a configurar un sistema desde cero y a programar soluciones prácticas, como un sistema de cambio de clase con música. Es vuestra introducción al **Internet de las Cosas (IoT) y a la administración de sistemas Linux**."</p>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-lg text-gray-800">Módulo 3: Administración de Servicios Web (SA8-SA9)</h4>
+                                            <p>"Finalmente, consolidaremos vuestras habilidades como administradores de sistemas. Instalaréis, ampliaréis y gestionaréis un sitio web completo con WordPress. Esto implica no solo la parte visible, sino también la gestión de usuarios, la seguridad y el mantenimiento. Os convertiréis en **administradores de un servicio web real**."</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Fase 2 -->
+                    <div class="flex flex-col md:flex-row items-start gap-6 p-4 border-l-4 border-[#E74C3C]">
+                         <div class="flex-shrink-0 text-center md:text-left">
+                            <div class="bg-[#E74C3C] text-white rounded-full w-20 h-20 flex flex-col items-center justify-center">
+                                <span class="text-2xl font-bold">Fase 2</span>
+                                <span class="text-xs">25 min</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-[#E74C3C]">El Equipo: Competencias y Foco de Especialización</h3>
+                            <p class="text-gray-600 mb-4">Objetivo: Conocer el nivel de consolidación de cada alumno y sus intereses de especialización para el curso.</p>
+                            <div class="mt-4 pl-4 border-l-2 border-gray-200 space-y-6">
+                                <div>
+                                    <h4 class="font-bold text-lg text-gray-800">1. Tu Ficha de Especialista (5 min)</h4>
+                                    <p class="mt-2 text-gray-700">"Como futuros especialistas, es clave saber de dónde partís y hacia dónde queréis ir. En una hoja, rellenad vuestra ficha:"</p>
+                                    <div class="my-4 p-4 border border-dashed border-[#E74C3C] rounded-lg bg-red-50">
+                                        <p class="font-bold text-center text-lg text-[#2C3E50]">FICHA DE ESPECIALISTA - [Tu Nombre]</p>
+                                        <p class="mt-2"><strong>1. Competencia Consolidada:</strong> De lo que visteis el año pasado (programación, sistemas, redes...), ¿en qué área te sientes más seguro o qué fue lo que más te gustó?</p>
+                                        <p class="mt-2"><strong>2. Foco de Interés para este curso:</strong> De los módulos que he explicado (POO, Raspberry Pi, WordPress), ¿cuál te llama más la atención para tus proyectos? ¿Por qué?</p>
+                                        <p class="mt-2"><strong>3. Visión Post-Bachillerato:</strong> ¿Has afinado tu idea de lo que quieres estudiar o hacer después? ¿Cómo crees que los proyectos de este año te pueden ayudar a conseguirlo?</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg text-gray-800">2. Ronda de Presentaciones (20 min)</h4>
+                                    <p class="mt-2 text-gray-700">"Empiezo yo: Mi competencia consolidada es [menciona tu área]. Mi foco de interés este año es asegurar que todos dominéis la POO. Y mi visión es que este curso os dé la confianza para afrontar cualquier reto técnico superior."</p>
+                                    <p>"Vuestro turno. Por orden, nombre y compartid vuestra ficha."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fase 3 -->
+                    <div class="flex flex-col md:flex-row items-start gap-6 p-4 border-l-4 border-[#F39C12]">
+                         <div class="flex-shrink-0 text-center md:text-left">
+                            <div class="bg-[#F39C12] text-white rounded-full w-20 h-20 flex flex-col items-center justify-center">
+                                <span class="text-2xl font-bold">Fase 3</span>
+                                <span class="text-xs">5 min</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-[#F39C12]">Lanzamiento del Proyecto: Cierre y Avance</h3>
+                            <p class="text-gray-600 mb-4">Objetivo: Conectar las expectativas con el plan de acción inmediato.</p>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li><strong>(45-48 min) Síntesis y Enfoque:</strong> "Gracias. Es muy útil saber vuestros puntos fuertes e intereses. Veo que hay una buena base y muchas ganas de profundizar. Recordad que aunque tengáis un foco de interés, un buen especialista debe ser versátil y entender cómo se conectan todas las áreas."</li>
+                                <li><strong>(48-50 min) Anuncio de la Primera Misión:</strong> "La próxima semana arrancamos con la SA0 y SA1. Nos familiarizaremos con el entorno de trabajo de este año y empezaremos directamente a trabajar con un escenario de clases en Greenfoot. Será el primer proyecto para vuestro legado."</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pedagogy-guide" class="bg-white p-6 md:p-8 rounded-lg shadow-lg mb-12">
+                <h2 class="text-3xl font-bold text-center text-[#2C3E50] mb-8">💡 Guía Pedagógica y de Gestión</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-4 border border-gray-200 rounded-lg">
+                        <h4 class="font-bold text-lg text-[#3498DB] mb-2">Consejos de Gestión del Aula</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li><strong>Nivel de Exigencia:</strong> Adapta tu lenguaje. Habla de "requisitos del proyecto", "entregables", "documentación técnica". Hazles sentir que están en un entorno pre-profesional.</li>
+                             <li><strong>Grupo Numeroso e Irregular:</strong> Tu programación indica un grupo grande y con niveles diferentes. La ronda de presentaciones es crucial para mapear esto. Usa esta información para crear grupos de trabajo compensados en la SA1.</li>
+                            <li><strong>Proyectos Reales:</strong> Enfatiza que los proyectos (el timbre con Pi, la web con WordPress) son problemas reales que podrían encontrarse en una empresa o en un proyecto personal.</li>
+                        </ul>
+                    </div>
+                    <div class="p-4 border border-gray-200 rounded-lg">
+                        <h4 class="font-bold text-lg text-[#E74C3C] mb-2">Preguntas para Fomentar la Reflexión</h4>
+                         <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>"El año pasado vimos programación estructurada. Este año veremos Orientación a Objetos. ¿Alguien tiene idea de por qué este cambio es un salto de nivel tan importante en la industria?"</li>
+                            <li>"Un proyecto con Raspberry Pi combina hardware (Sistemas) y software (Programación). ¿Qué retos creéis que encontraremos al unir esos dos mundos?"</li>
+                            <li>"Cuando administréis vuestro WordPress, seréis responsables de la seguridad. ¿Qué pasaría si alguien hackeara vuestro sitio? ¿De quién sería la responsabilidad?"</li>
+                        </ul>
+                    </div>
+                    <div class="p-4 border border-gray-200 rounded-lg">
+                        <h4 class="font-bold text-lg text-[#F39C12] mb-2">Consideraciones para la Diversidad</h4>
+                         <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li><strong>Reforzar la Base:</strong> Para los alumnos con menos base, la SA1 con Greenfoot es una buena oportunidad. Al ser muy visual, puede ayudarles a entender conceptos abstractos de POO más fácilmente.</li>
+                            <li><strong>Retos de Ampliación:</strong> Para los más avanzados, ten pensadas pequeñas ampliaciones en cada SA. (Ej: "En el juego del ahorcado, ¿podrías añadir un sistema de puntuación o un temporizador?").</li>
+                             <li><strong>Conexión con Intereses:</strong> Si un alumno quiere estudiar, por ejemplo, Bellas Artes, conecta la administración de WordPress con la creación de un portafolio digital para sus trabajos. Adapta la utilidad de la asignatura a sus metas.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="curriculum-connection" class="bg-white p-6 md:p-8 rounded-lg shadow-lg mb-12">
+                 <h2 class="text-3xl font-bold text-center text-[#2C3E50] mb-8">🔗 Conexión con el Currículo (C. Valenciana)</h2>
+                 <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Esta sesión de 2º de Bachillerato se centra en la consolidación y aplicación de las Competencias Específicas (CE), preparando al alumnado para un nivel superior.</p>
+                 <div class="space-y-4 max-w-4xl mx-auto">
+                    <div class="p-4 border-l-4 border-blue-400 bg-blue-50 rounded-r-lg">
+                        <h4 class="font-bold text-lg text-blue-800">CE1: Resolver problemas de creciente dificultad</h4>
+                        <p class="text-gray-700 mt-1">La presentación del Módulo de POO (SA1-SA5) apunta directamente a esta competencia, enfatizando que se pasará a resolver problemas con paradigmas más avanzados y de manera más autónoma, incluyendo la evaluación y mantenimiento del software.</p>
+                    </div>
+                     <div class="p-4 border-l-4 border-red-400 bg-red-50 rounded-r-lg">
+                        <h4 class="font-bold text-lg text-red-800">CE2, CE3, CE4: Administrar sistemas, redes y servicios</h4>
+                        <p class="text-gray-700 mt-1">Los módulos de Raspberry Pi y WordPress (SA6-SA9) están diseñados para aplicar y profundizar en estas competencias. Se pasa del diseño a la administración real, la identificación de incidencias y el despliegue de servicios en un entorno tangible.</p>
+                    </div>
+                    <div class="p-4 border-l-4 border-gray-400 bg-gray-50 rounded-r-lg">
+                        <h4 class="font-bold text-lg text-gray-800">CE5: Gestionar la incertidumbre y crear documentación técnica</h4>
+                        <p class="text-gray-700 mt-1">El enfoque de "legado" y "especialista" conecta directamente con esta competencia. Se les prepara para gestionar situaciones complejas y se introduce la idea de que un buen proyecto siempre va acompañado de una buena documentación, un aspecto clave en el mundo profesional.</p>
+                    </div>
+                 </div>
+            </section>
+
+            <section id="data-input" class="bg-white p-6 md:p-8 rounded-lg shadow-lg mb-12">
+                <h2 class="text-3xl font-bold text-center text-[#2C3E50] mb-2">Análisis Post-Sesión: Generador de Gráficas</h2>
+                <p class="text-center text-gray-600 mb-8">Introduce aquí los datos recogidos de los perfiles para visualizar las tendencias de la clase.</p>
+                <form id="data-form" class="max-w-4xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-bold text-[#2C3E50] mb-4">Foco de Interés (Nº Alumnos)</h3>
+                            <div class="space-y-4">
+                                <div><label for="interest-poo" class="block text-sm font-medium text-gray-700">Desarrollo POO (SA1-5)</label><input type="number" id="interest-poo" value="0" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#3498DB] focus:ring-[#3498DB] sm:text-sm"></div>
+                                <div><label for="interest-pi" class="block text-sm font-medium text-gray-700">Sistemas Embebidos / Pi (SA6-7)</label><input type="number" id="interest-pi" value="0" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#3498DB] focus:ring-[#3498DB] sm:text-sm"></div>
+                                <div><label for="interest-wp" class="block text-sm font-medium text-gray-700">Admin. Servicios Web (SA8-9)</label><input type="number" id="interest-wp" value="0" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#3498DB] focus:ring-[#3498DB] sm:text-sm"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-[#2C3E50] mb-4">Competencia Consolidada (Nº Alumnos)</h3>
+                             <div class="space-y-4">
+                                <div><label for="exp-prog" class="block text-sm font-medium text-gray-700">Programación</label><input type="number" id="exp-prog" value="0" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#3498DB] focus:ring-[#3498DB] sm:text-sm"></div>
+                                <div><label for="exp-sys" class="block text-sm font-medium text-gray-700">Sistemas / Hardware</label><input type="number" id="exp-sys" value="0" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#3498DB] focus:ring-[#3498DB] sm:text-sm"></div>
+                                <div><label for="exp-net" class="block text-sm font-medium text-gray-700">Redes</label><input type="number" id="exp-net" value="0" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#3498DB] focus:ring-[#3498DB] sm:text-sm"></div>
+                                <div><label for="exp-serv" class="block text-sm font-medium text-gray-700">Servicios / Web</label><input type="number" id="exp-serv" value="0" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#3498DB] focus:ring-[#3498DB] sm:text-sm"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <button type="submit" class="bg-[#3498DB] text-white font-bold py-3 px-8 rounded-lg shadow-md hover:bg-[#2980B9] transition-colors">
+                            Generar y Actualizar Gráficas
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <section id="results-section" class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                 <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-[#2C3E50] mb-4">Análisis Visual: Foco de Interés del Grupo</h3>
+                     <div id="interestChartWrapper" class="hidden">
+                        <div class="chart-container">
+                            <canvas id="interestDonutChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-[#2C3E50] mb-4">Análisis Visual: Competencias de Partida</h3>
+                     <div id="competenceChartWrapper" class="hidden">
+                        <div class="chart-container">
+                            <canvas id="competenceBarChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        let competenceChart = null;
+        let interestChart = null;
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const COLORS = {
+            blue: '#3498DB',
+            red: '#E74C3C',
+            yellow: '#F39C12',
+            dark: '#2C3E50',
+            green: '#2ECC71'
+        };
+
+        function updateCharts(event) {
+            event.preventDefault();
+
+            if (competenceChart) competenceChart.destroy();
+            if (interestChart) interestChart.destroy();
+
+            const interestPoo = parseInt(document.getElementById('interest-poo').value) || 0;
+            const interestPi = parseInt(document.getElementById('interest-pi').value) || 0;
+            const interestWp = parseInt(document.getElementById('interest-wp').value) || 0;
+
+            const expProg = parseInt(document.getElementById('exp-prog').value) || 0;
+            const expSys = parseInt(document.getElementById('exp-sys').value) || 0;
+            const expNet = parseInt(document.getElementById('exp-net').value) || 0;
+            const expServ = parseInt(document.getElementById('exp-serv').value) || 0;
+            
+            const interestData = {
+                labels: [['Desarrollo', 'POO'], ['Sistemas', 'Embebidos (Pi)'], ['Admin.', 'Web (WP)']],
+                datasets: [{
+                    label: 'Foco de Interés',
+                    data: [interestPoo, interestPi, interestWp],
+                    backgroundColor: [COLORS.blue, COLORS.red, COLORS.yellow],
+                    hoverOffset: 4
+                }]
+            };
+
+            const interestCtx = document.getElementById('interestDonutChart').getContext('2d');
+            interestChart = new Chart(interestCtx, {
+                type: 'doughnut',
+                data: interestData,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'top' },
+                        tooltip: { callbacks: { title: tooltipTitleCallback } }
+                    }
+                }
+            });
+
+            const competenceData = {
+                labels: ['Programación', ['Sistemas /', 'Hardware'], 'Redes', ['Servicios /', 'Web']],
+                datasets: [{
+                    label: 'Competencia Consolidada',
+                    data: [expProg, expSys, expNet, expServ],
+                    backgroundColor: 'rgba(52, 152, 219, 0.7)',
+                    borderColor: COLORS.blue,
+                    borderWidth: 1
+                }]
+            };
+
+            const competenceCtx = document.getElementById('competenceBarChart').getContext('2d');
+            competenceChart = new Chart(competenceCtx, {
+                type: 'bar',
+                data: competenceData,
+                 options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: { y: { beginAtZero: true } },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { callbacks: { title: tooltipTitleCallback } }
+                    }
+                }
+            });
+
+            document.getElementById('competenceChartWrapper').classList.remove('hidden');
+            document.getElementById('interestChartWrapper').classList.remove('hidden');
+        }
+
+        document.getElementById('data-form').addEventListener('submit', updateCharts);
+        
+        window.addEventListener('load', () => {
+             document.getElementById('data-form').dispatchEvent(new Event('submit'));
+        });
+    </script>
+</body>
+</html>
+
